@@ -5,7 +5,7 @@ This validation is easy
 
 
 # Steps
-1.include that class using include function
+1.include that class using include function then open validation.php and give database informations
 eg:require_once("Validation.php");
 2.create object for that class in constructor
 eg:$this->Validation = new Validation;
