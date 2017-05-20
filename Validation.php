@@ -51,7 +51,17 @@ class Validation
 			elseif($value == "email")
 				$this->errorArray[] = self::emailCheck($rulevalue);
 			elseif (substr($value, 0, 7) == "exists:")
-				 $this->errorArray[] = self::existsCheck($rulevalue,$value);
+				$this->errorArray[] = self::existsCheck($rulevalue,$value);
+			elseif($value == "int" )
+				$this->errorArray[] = self::intCheck($rulevalue);
+			elseif($value == "string")
+				$this->errorArray[] = self::stringCheck($rulevalue);
+			elseif($value == "number")
+				$this->errorArray[] = self::numberCheck($rulevalue);
+			elseif($value == "float")
+				$this->errorArray[] = self::floatCheck($rulevalue);
+			elseif($value == "array")
+				$this->errorArray[] = self::arrayCheck($rulevalue);
 		}
 
 	}
@@ -96,4 +106,40 @@ class Validation
 		else
 			return 1;
 	}
+	public function intCheck($value)
+	{
+		if(is_int($value))
+			return 0;
+		else
+			return 1;
+	}
+	public function stringCheck($value)
+	{
+		if(is_string($value))
+			return 0;
+		else
+			return 1;
+	}
+	public function numberCheck($value)
+	{
+		if(is_numeric($value))
+			return 0;
+		else
+			return 1;
+	}
+	public function floatCheck($value)
+	{
+		if(is_float($value))
+			return 0;
+		else
+			return 1;
+	}
+	public function arrayCheck($value)
+	{
+		if(is_arry($value))
+			return 0;
+		else
+			return 1;
+	}
+	
 }
