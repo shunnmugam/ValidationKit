@@ -3,9 +3,9 @@
 class Validation
 {
     const V_DB_SERVER = "localhost";
-    const V_DB_USER = "redwebde_rwsrest";
-    const V_DB_PASSWORD = "N!*eiGO_tQz7";
-    const V_DB = "redwebde_rws_restaurant";
+    const V_DB_USER = "**************";  //username
+    const V_DB_PASSWORD = "*****************";  //password
+    const V_DB = "db_name";   //dbname
     //public $validationdb = NULL;
 
 	public function __construct()
