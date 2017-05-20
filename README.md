@@ -29,3 +29,8 @@ if($Validation == 0)
 3.max      - maximum length
 4.email    - email only allowed
 5.exists:tablename.fieldname - check value exist in database
+6.int      - check is integer or not
+7.string   - check is string or not
+8.float    - check is float or not
+9.number   - check is number or not
+10.array   - check is array or not
