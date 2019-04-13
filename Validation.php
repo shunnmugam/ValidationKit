@@ -102,7 +102,7 @@ class Validation
         $field = substr($data, strpos($data, ".") + 1);
 
         $table = mysql_real_escape_string($table);
-        $field = mysql_real_escape_string($table);
+        $field = mysql_real_escape_string($field);
         $value = mysql_real_escape_string($value);
 
 		$sql = mysql_query("SELECT * FROM $table WHERE $field = '$value'", $this->validationdb);
